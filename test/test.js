@@ -375,9 +375,18 @@ function checkMakeBoxes () {
   })
 
   it('"makeBanner" function', function () {
+<<<<<<< HEAD
     assert.deepStrictEqual(module.makeBanner(''), '****\n*  *\n****', 'test 1')
     assert.deepStrictEqual(module.makeBanner('x'), '*****\n* x *\n*****', 'test 2')
     assert.deepStrictEqual(module.makeBanner('Welcome to DigitalCrafts'), '****************************\n* Welcome to DigitalCrafts *\n****************************', 'test 3')
+=======
+    assert.deepStrictEqual(module.makeBanner(''), '****\n*  *\n****')
+    assert.deepStrictEqual(module.makeBanner('x'), '*****\n* x *\n*****')
+    assert.deepStrictEqual(module.makeBanner('Welcome to DigitalCrafts'),
+      '****************************\n' +
+      '* Welcome to DigitalCrafts *\n' +
+      '****************************')
+>>>>>>> d4433359add955abc1a650d4e619c52302b251d5
     // TODO: should we add a test case here for a newline in the text?
   })
 }

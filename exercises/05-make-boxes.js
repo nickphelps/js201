@@ -14,7 +14,7 @@ function makeSquare(n) {
     var topLine = '*'
     //making the topline
     for (var i = 1; i < n; i++) {
-        topLine += '*'
+        topLine = topLine + '*'
     }//topline for
 
     var mySquare = topLine
@@ -24,7 +24,7 @@ function makeSquare(n) {
     }
     return mySquare
 }
-makeSquare(1)
+makeSquare(4)
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBox" which is given a width and height and returns a
