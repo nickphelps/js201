@@ -357,17 +357,17 @@ function checkMakeBoxes () {
   })
 
   it('"makeSquare" function', function () {
-    assert.deepStrictEqual(module.makeSquare(0), '')
-    assert.deepStrictEqual(module.makeSquare(1), '*')
+    assert.deepStrictEqual(module.makeSquare(0), '', 'first case')
+    assert.deepStrictEqual(module.makeSquare(1), '*', 'i drank out of your cup')
     assert.deepStrictEqual(module.makeSquare(2), '**\n**')
     assert.deepStrictEqual(module.makeSquare(3), '***\n***\n***')
     assert.deepStrictEqual(module.makeSquare(5), '*****\n*****\n*****\n*****\n*****')
   })
 
   it('"makeBox" function', function () {
-    assert.deepStrictEqual(module.makeBox(0, 0), '')
-    assert.deepStrictEqual(module.makeBox(1, 1), '*')
-    assert.deepStrictEqual(module.makeBox(2, 1), '**')
+    assert.deepStrictEqual(module.makeBox(0, 0), '', 'just checking')
+    assert.deepStrictEqual(module.makeBox(1, 1), '*' , 'second error')
+    assert.deepStrictEqual(module.makeBox(2, 1), '**', 'third error')
     assert.deepStrictEqual(module.makeBox(3, 2), '***\n***')
     assert.deepStrictEqual(module.makeBox(3, 3), '***\n* *\n***')
     assert.deepStrictEqual(module.makeBox(6, 4), '******\n*    *\n*    *\n******')
@@ -375,9 +375,9 @@ function checkMakeBoxes () {
   })
 
   it('"makeBanner" function', function () {
-    assert.deepStrictEqual(module.makeBanner(''), '****\n*  *\n****')
-    assert.deepStrictEqual(module.makeBanner('x'), '*****\n* x *\n*****')
-    assert.deepStrictEqual(module.makeBanner('Welcome to DigitalCrafts'), '****************************\n* Welcome to DigitalCrafts *\n****************************')
+    assert.deepStrictEqual(module.makeBanner(''), '****\n*  *\n****', 'test 1')
+    assert.deepStrictEqual(module.makeBanner('x'), '*****\n* x *\n*****', 'test 2')
+    assert.deepStrictEqual(module.makeBanner('Welcome to DigitalCrafts'), '****************************\n* Welcome to DigitalCrafts *\n****************************', 'test 3')
     // TODO: should we add a test case here for a newline in the text?
   })
 }

@@ -23,3 +23,12 @@
 //   [null, 'X', 'X']
 //   ])
 // null
+
+function ticTacToe() {
+
+
+
+console.log('Hello')
+
+}
+ticTacToe()

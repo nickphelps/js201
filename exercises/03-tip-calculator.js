@@ -10,6 +10,21 @@
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
 
+function tipAmount (bill, level) {
+    var billAmount = {
+        billTotal : bill,
+        serviceLevel : level
+    }
+    if (billAmount.serviceLevel == 'good') {
+        return billAmount.billTotal * 0.2
+    } else if (billAmount.serviceLevel == 'fair') {
+        return billAmount.billTotal * 0.15
+    } else {
+        billAmount.billTotal * 0.10
+    }
+} 
+
+tipAmount(40, 'fair')
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,8 +36,11 @@
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
 
+function totalAmount (bill, level) {
+    return bill + tipAmount(bill, level)
+} 
 
-
+totalAmount(100, 'good')
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "splitAmount" that takes a bill amount, the level of service,
 // and the number of people to split the bill between. It should return the final
@@ -31,3 +49,7 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+
+function splitAmount (bill, level, people) {
+    return (totalAmount(bill, level) / people)
+}
