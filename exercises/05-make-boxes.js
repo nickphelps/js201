@@ -97,4 +97,4 @@ function makeBanner(myBannner) {
     return myCompleteString
 
 }
-console.log( makeBanner(''))
+console.log( makeBanner('Welcome'))
